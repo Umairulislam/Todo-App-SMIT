@@ -6,6 +6,8 @@ function addTodo() {
     var liText = document.createTextNode(todoItem.value)
     li.appendChild(liText)
     list.appendChild(li)
+    var br = document.createElement("br");
+    li.appendChild(br);
 
     // delbtn
     var delBtn = document.createElement('button')
