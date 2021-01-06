@@ -2,42 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fjalla+One&family=Redressed&family=Roboto:wght@100&family=Staatliches&display=swap"
-        rel="stylesheet">
-        
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fjalla+One&family=Redressed&family=Roboto:wght@100&family=Staatliches&display=swap"
+    rel="stylesheet">
+
+  <!-- firebase integration -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyC48LWJS3qV31oBMLt-GzIW06FLiMLQg3w",
+      authDomain: "my-todo-app-640fd.firebaseapp.com",
+      databaseURL: "https://my-todo-app-640fd-default-rtdb.firebaseio.com",
+      projectId: "my-todo-app-640fd",
+      storageBucket: "my-todo-app-640fd.appspot.com",
+      messagingSenderId: "691847877184",
+      appId: "1:691847877184:web:6f8c153de65db7a12945a5",
+      measurementId: "G-Y47ELYWDGX"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <!-- firebase integration -->
 
 </head>
 
 <body>
 
-    <div class="container">
-        <div>
-
-            <h1>todo <span class="h2">list</span></h1>
-
-            <input class="input" type="text" placeholder="Add todo" name="" id="todoItem">
-            <button class="addbtn" onclick="addTodo()"><i class="fas fa-plus"></i></button>
-            <button class="dltallbtn" onclick="dltAll()"><i class="fas fa-trash-alt"></i></button>
-
-        </div>
-        <div>
-            <ul id="list">
-            </ul>
-        </div>
+  <div class="container">
+    <div>
+      <h1>todo <span class="h2">list</span></h1>
+      <input class="input" type="text" placeholder="Add todo" name="" id="todoItem">
+      <button class="addbtn" onclick="addTodo()"><i class="fas fa-plus"></i></button>
+      <button class="dltallbtn" onclick="dltAll()"><i class="fas fa-trash-alt"></i></button>
     </div>
+    
+    <div>
+      <ul id="list">
+      </ul>
+    </div>
+  </div>
 
 
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
